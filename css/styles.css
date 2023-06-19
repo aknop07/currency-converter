@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    max-width: 600px;
+    margin: 30px auto;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(0, 104, 200, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+}

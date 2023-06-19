@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency calculator - Andrzej Knop Homework</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/script.js"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <img class="header__image" src="img/header.png" alt="Currency exchange website illustration">
+    </header>
+    <main>
+        <section class="section">
+            <fieldset class="section__fieldset">
+                <legend class="section__legend">Currency calculator</legend>
+                <form class="js-form">
+                    <label class="section__label" for="amount">PLN amount:</label>
+                    <input class="section__input js-amount" type="number" id="amount" step="0.01"><br>
+                    <label class="section__label" for="currency">Choose currency:</label>
+                    <select id="currency" class="section__input js-currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                    <button type="submit">Calculate</button>
+                    <p class="section__paragraph">You will get: <span class="section__paragraph--result js-result"></span></p>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+</body>
+
+</html>
