@@ -12,18 +12,22 @@ formElement.addEventListener("submit", (event) => {
 
     let currency = currencyElement.value;
     let amount = +amountElement.value;
+    let rate;
 
     switch (currency) {
         case "EUR":
-            resultElement.innerText = (amount / rateEUR).tofixed(2);
+            rate = rateEUR;
             break;
 
         case "GBP":
-            resultElement.innerText = (amount / rateGBP).toFixed(2);
+            rate = rateGBP;
             break;
 
         case "USD":
-            resultElement.innerText = (amount / rateUSD).toFixed(2);
+            rate = rateUSD
             break;
     };
+
+    let result = (amount / rate).toFixed(2);
+    resultElement.innerText = `${result} ${currency}`;
 });
