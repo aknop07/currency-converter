@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency calculator - Andrzej Knop Homework</title>
     <link href="css/styles.css" rel="stylesheet">
-    <link href="css/section.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,20 +22,20 @@
         <img class="header__image" src="img/header.png" alt="Currency exchange website illustration">
     </header>
     <main>
-        <section class="section">
-            <fieldset class="section__fieldset">
-                <legend class="section__legend">Currency calculator</legend>
+        <section class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Currency calculator</legend>
                 <form class="js-form">
-                    <label class="section__label" for="amount">PLN amount:</label>
-                    <input class="section__input js-amount" type="number" id="amount" step="0.01"><br>
-                    <label class="section__label" for="currency">Choose currency:</label>
-                    <select id="currency" class="section__input js-currency">
+                    <label class="form__label" for="amount">PLN amount:</label>
+                    <input class="form__input js-amount" type="number" id="amount" step="0.01"><br>
+                    <label class="form__label" for="currency">Choose currency:</label>
+                    <select id="currency" class="form__input js-currency">
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
                     </select>
                     <button type="submit">Calculate</button>
-                    <p class="section__paragraph">You will get: <span class="section__paragraph--result js-result"></span></p>
+                    <p class="form__paragraph">You will get: <span class="form__paragraph--result js-result"></span></p>
                 </form>
             </fieldset>
         </section>
