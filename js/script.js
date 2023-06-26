@@ -6,21 +6,20 @@
 
         switch (currency) {
             case "EUR":
-                return rate = amount / rateEUR;
+                return amount / rateEUR;
 
             case "GBP":
-                return rate = amount / rateGBP;
+                return amount / rateGBP;
 
             case "USD":
-                return rate = amount / rateUSD;
+                return amount / rateUSD;
         };
-    }
+    };
 
-    const updateResultText = (amount, rate, currency) => {
+    const updateResultText = (result, currency) => {
         const resultElement = document.querySelector(".js-result");
-        const result = (amount / rate).toFixed(2);
-        resultElement.innerText = `${result} ${currency}`;
-    }
+        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -31,16 +30,16 @@
         const currency = currencyElement.value;
         const amount = +amountElement.value;
 
-        calculateResult(amount, currency);
+        const result = calculateResult(amount, currency);
 
-        updateResultText(amount, rate, currency);
-    }
+        updateResultText(result, currency);
+    };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
         formElement.addEventListener("submit", onFormSubmit);
-    }
+    };
 
     init();
 }
